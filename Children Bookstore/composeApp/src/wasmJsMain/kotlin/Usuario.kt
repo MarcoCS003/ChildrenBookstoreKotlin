@@ -1,5 +1,4 @@
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
@@ -19,7 +18,6 @@ import childrenbookstore.composeapp.generated.resources.master
 import childrenbookstore.composeapp.generated.resources.visa
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.skia.Font
 
 data class MetodosPago(val numero: String, val tipo: String, val painter: Painter)
 data class Direcciones(val direccion: String, val estado: String, val pais: String, val codPostal: String)

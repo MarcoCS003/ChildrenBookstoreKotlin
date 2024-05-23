@@ -122,13 +122,12 @@ fun VistaCarritoLibro(book: Libro) {
         IconButton(onClick = {}) {
             Icon(imageVector = Icons.Default.Delete, null)
         }
-        var numero = (book.precio.toDouble() * 100) / 100.0
+        val numero = (book.precio.toDouble() * 100) / 100.0
         Text("$${numero}")
     }
 
 }
 
-@OptIn(ExperimentalResourceApi::class)
 @Composable
 fun ResumenCompra(productos: Double = 235.00) {
     Column(modifier = Modifier.width(250.dp).height(300.dp), verticalArrangement = Arrangement.SpaceBetween) {

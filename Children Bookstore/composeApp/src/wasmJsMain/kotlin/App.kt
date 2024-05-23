@@ -12,7 +12,6 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.unit.dp
@@ -36,10 +35,10 @@ data class NavigationItemContent(
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 fun App() {
-    val listMenu = listOf<NavigationItemContent>(
+    val listMenu = listOf(
         NavigationItemContent(
             icon = painterResource(Res.drawable.home),
-            text = "Menu Principal",
+            text =  "Menu Principal",
             ruta = "Presentacion"
         ),
         NavigationItemContent(
@@ -58,7 +57,7 @@ fun App() {
     val isHovered by interactionSource.collectIsHoveredAsState()
     var actualScreen by remember { mutableStateOf("Carrito") }
 
-    Box() {
+    Box {
         Row(modifier = Modifier.fillMaxWidth()) {
             Column(
                 modifier = Modifier
